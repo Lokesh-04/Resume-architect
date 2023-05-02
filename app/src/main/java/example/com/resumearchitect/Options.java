@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import example.com.resumearchitect.Achievement_details.Achievements;
@@ -12,10 +13,12 @@ import example.com.resumearchitect.Coursework_details.Coursework;
 import example.com.resumearchitect.Education_details.Education;
 import example.com.resumearchitect.Experience_details.Experience;
 import example.com.resumearchitect.Project_details.Project;
+import example.com.resumearchitect.Skills_details.Skills;
 
 public class Options extends AppCompatActivity {
 
     LinearLayout header,education,experience,project,achievements,skills,coursework;
+    Button select_template;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +74,7 @@ public class Options extends AppCompatActivity {
         skills.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),Skills.class);
+                Intent intent = new Intent(getApplicationContext(), Skills.class);
                 startActivity(intent);
             }
         });
@@ -81,6 +84,15 @@ public class Options extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Coursework.class);
+                startActivity(intent);
+            }
+        });
+
+        select_template = findViewById(R.id.select_template);
+        select_template.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Templates.class);
                 startActivity(intent);
             }
         });

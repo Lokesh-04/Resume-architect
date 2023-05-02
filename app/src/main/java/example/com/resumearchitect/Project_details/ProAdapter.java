@@ -32,10 +32,10 @@ public class ProAdapter extends RecyclerView.Adapter<ProAdapter.InputViewHolder>
     @Override
     public void onBindViewHolder(@NonNull InputViewHolder holder, int position) {
         String inputText = inputList.get(position);
-        holder.name.setText(inputText);
-        holder.type.setText(inputText);
-        holder.time.setText(inputText);
-        holder.desc.setText(inputText);
+        holder.pro_name.setText(inputText);
+        holder.tech_stk.setText(inputText);
+        holder.pro_desc.setText(inputText);
+        holder.pro_link.setText(inputText);
         holder.deleteButton.setOnClickListener(v -> {
             inputList.remove(position);
             notifyDataSetChanged();
@@ -49,15 +49,15 @@ public class ProAdapter extends RecyclerView.Adapter<ProAdapter.InputViewHolder>
 
     public static class InputViewHolder extends RecyclerView.ViewHolder {
 
-        TextInputEditText name,type,time,desc;
+        TextInputEditText pro_name,tech_stk,pro_desc,pro_link;
         ImageButton deleteButton;
 
         public InputViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.name_of_experience);
-            type = itemView.findViewById(R.id.type_of_experience);
-            time = itemView.findViewById(R.id.timeline);
-            desc = itemView.findViewById(R.id.description);
+            pro_name = itemView.findViewById(R.id.name_of_project);
+            tech_stk = itemView.findViewById(R.id.tech_stk);
+            pro_desc = itemView.findViewById(R.id.project_description);
+            pro_link = itemView.findViewById(R.id.project_link);
             deleteButton = itemView.findViewById(R.id.delete_button);
         }
     }

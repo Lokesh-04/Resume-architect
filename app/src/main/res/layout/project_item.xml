@@ -55,10 +55,10 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/name_of_experience"
+                        android:id="@+id/name_of_project"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="Name of Experience" />
+                        android:hint="Name of Project" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -66,10 +66,10 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/type_of_experience"
+                        android:id="@+id/tech_stk"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Type of Experience" />
+                        android:hint="Tech stack used eg: html,css.." />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -77,21 +77,21 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/timeline"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Timeline" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/description"
+                        android:id="@+id/project_description"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Description" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/project_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="URL of project" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 

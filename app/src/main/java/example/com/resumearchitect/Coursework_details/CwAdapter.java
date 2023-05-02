@@ -32,10 +32,8 @@ public class CwAdapter extends RecyclerView.Adapter<CwAdapter.InputViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull InputViewHolder holder, int position) {
         String inputText = inputList.get(position);
-        holder.name.setText(inputText);
-        holder.type.setText(inputText);
-        holder.time.setText(inputText);
-        holder.desc.setText(inputText);
+        holder.crs_name.setText(inputText);
+        holder.crs_ctf.setText(inputText);
         holder.deleteButton.setOnClickListener(v -> {
             inputList.remove(position);
             notifyDataSetChanged();
@@ -49,15 +47,13 @@ public class CwAdapter extends RecyclerView.Adapter<CwAdapter.InputViewHolder> {
 
     public static class InputViewHolder extends RecyclerView.ViewHolder {
 
-        TextInputEditText name,type,time,desc;
+        TextInputEditText crs_name,crs_ctf;
         ImageButton deleteButton;
 
         public InputViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.name_of_experience);
-            type = itemView.findViewById(R.id.type_of_experience);
-            time = itemView.findViewById(R.id.timeline);
-            desc = itemView.findViewById(R.id.description);
+            crs_name = itemView.findViewById(R.id.name_of_course);
+            crs_ctf = itemView.findViewById(R.id.course_certificate);
             deleteButton = itemView.findViewById(R.id.delete_button);
         }
     }

@@ -1,5 +1,7 @@
 package example.com.resumearchitect.Achievement_details;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -41,28 +43,22 @@ public class Achievements extends AppCompatActivity {
 
         Button saveButton = findViewById(R.id.save_button);
         saveButton.setOnClickListener(new View.OnClickListener() {
+            SharedPreferences sharedPreferences = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
             @Override
             public void onClick(View view) {
 
-                List<String> data = new ArrayList<>();
-                for (int i = 0; i < achAdapter.getItemCount(); i++) {
-                    TextInputEditText name_of_experience = recyclerView.findViewHolderForAdapterPosition(i).itemView.findViewById(R.id.name_of_experience);
-                    TextInputEditText type_of_experience = recyclerView.findViewHolderForAdapterPosition(i).itemView.findViewById(R.id.type_of_experience);
-                    TextInputEditText timeline = recyclerView.findViewHolderForAdapterPosition(i).itemView.findViewById(R.id.timeline);
-                    TextInputEditText description = recyclerView.findViewHolderForAdapterPosition(i).itemView.findViewById(R.id.description);
-                    String name = name_of_experience.getText().toString().trim();
-                    String type = type_of_experience.getText().toString().trim();
-                    String time = timeline.getText().toString().trim();
-                    String desc = description.getText().toString().trim();
-                    if(TextUtils.isEmpty(name_of_experience.getText().toString())) {
-                        // Text input is empty
-                        Toast.makeText(Achievements.this, "fill the details", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
-                        // transfer the strings to pdf........
+                for (int i = 0; i < recyclerView.getChildCount(); i++) {
+                    View rview = recyclerView.getChildAt(i);
+                    TextInputEditText ach_name = rview.findViewById(R.id.name_of_achievement);
+                    String ach = ach_name.getText().toString().trim();
+                    if (!TextUtils.isEmpty(ach)) {
+                        editor.putString("achievement_" + i, ach);
                     }
                 }
-                // do something with the data (e.g. save it to a database)
+                editor.putInt("num_items", recyclerView.getChildCount());
+                editor.apply();
+
             }
         });
     }

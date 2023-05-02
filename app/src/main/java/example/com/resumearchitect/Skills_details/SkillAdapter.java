@@ -1,4 +1,4 @@
-package example.com.resumearchitect;
+package example.com.resumearchitect.Skills_details;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,9 +33,6 @@ public class SkillAdapter extends RecyclerView.Adapter<SkillAdapter.InputViewHol
     public void onBindViewHolder(@NonNull InputViewHolder holder, int position) {
         String inputText = inputList.get(position);
         holder.name.setText(inputText);
-        holder.type.setText(inputText);
-        holder.time.setText(inputText);
-        holder.desc.setText(inputText);
         holder.deleteButton.setOnClickListener(v -> {
             inputList.remove(position);
             notifyDataSetChanged();
@@ -49,15 +46,12 @@ public class SkillAdapter extends RecyclerView.Adapter<SkillAdapter.InputViewHol
 
     public static class InputViewHolder extends RecyclerView.ViewHolder {
 
-        TextInputEditText name,type,time,desc;
+        TextInputEditText name;
         ImageButton deleteButton;
 
         public InputViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.name_of_experience);
-            type = itemView.findViewById(R.id.type_of_experience);
-            time = itemView.findViewById(R.id.timeline);
-            desc = itemView.findViewById(R.id.description);
+            name = itemView.findViewById(R.id.name_of_skill);
             deleteButton = itemView.findViewById(R.id.delete_button);
         }
     }

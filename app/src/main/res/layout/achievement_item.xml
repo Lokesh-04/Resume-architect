@@ -27,9 +27,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="40dp"
+                    android:textSize="30dp"
                     android:layout_alignParentStart="true"
-                    android:text="Achievement"
+                    android:text="Achievements"
                     android:layout_alignParentLeft="true" />
 
                 <ImageButton
@@ -55,46 +55,11 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/name_of_experience"
+                        android:id="@+id/name_of_achievement"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="Name of Experience" />
+                        android:hint="Enter Any Achievements" />
                 </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/type_of_experience"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Type of Experience" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/timeline"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Timeline" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/description"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Description" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

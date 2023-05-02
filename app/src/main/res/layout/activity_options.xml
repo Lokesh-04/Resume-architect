@@ -5,178 +5,229 @@
     android:padding="16dp">
 
     <LinearLayout
-        android:id="@+id/header_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="@drawable/block_background">
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/select_template"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="222dp"
+                android:layout_marginLeft="222dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginRight="0dp"
+                android:text="Select Template" />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/header_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/block_background"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_header"
+                android:contentDescription="@string/header_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/header_title"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/education_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_block"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/block_background"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_education"
+                android:contentDescription="@string/education_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/education_title"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/experience_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/education_block"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/block_background"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp">
+
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_experience"
+                android:contentDescription="@string/experience_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/experience_title"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/project_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/experience_block"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/block_background"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_project"
+                android:contentDescription="@string/project_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/project_title"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/achievements_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/project_block"
+            android:background="@drawable/block_background"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp">
+
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_header"
-            android:contentDescription="@string/header_icon"/>
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="@string/project_icon"
+                android:src="@drawable/ic_achievement" />
 
-        <TextView
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/achievement_title"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/skills_block"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/header_title"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:layout_marginStart="16dp"/>
+            android:layout_below="@+id/achievements_block"
+            android:background="@drawable/block_background"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp">
+
+
+        <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="@string/skills_icon"
+                android:src="@drawable/ic_skills" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/skills_title"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/coursework_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/skills_block"
+            android:background="@drawable/block_background"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp">
+
+
+        <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="@string/coursework_icon"
+                android:src="@drawable/ic_coursework" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/coursework_title"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/education_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/header_block"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="@drawable/block_background">
 
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_education"
-            android:contentDescription="@string/education_icon"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/education_title"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:layout_marginStart="16dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/experience_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/education_block"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="@drawable/block_background">
-
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_experience"
-            android:contentDescription="@string/experience_icon"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/experience_title"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:layout_marginStart="16dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/project_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/experience_block"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="@drawable/block_background">
-
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_project"
-            android:contentDescription="@string/project_icon"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/project_title"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:layout_marginStart="16dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/achievements_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/project_block"
-        android:background="@drawable/block_background"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:contentDescription="@string/project_icon"
-            android:src="@drawable/ic_achievement" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/achievement_title"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/skills_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/achievements_block"
-        android:background="@drawable/block_background"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:contentDescription="@string/skills_icon"
-            android:src="@drawable/ic_skills" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/skills_title"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/coursework_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/skills_block"
-        android:background="@drawable/block_background"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:contentDescription="@string/coursework_icon"
-            android:src="@drawable/ic_coursework" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/coursework_title"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
-    </LinearLayout>
 
 
 </RelativeLayout>

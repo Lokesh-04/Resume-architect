@@ -1,4 +1,4 @@
-package example.com.resumearchitect.Experience_details;
+package example.com.resumearchitect.Skills_details;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,26 +18,26 @@ import java.util.List;
 
 import example.com.resumearchitect.R;
 
-public class Experience extends AppCompatActivity {
+public class Skills extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private ExpAdapter expAdapter;
+    private SkillAdapter skillAdapter;
     private final List<String> inputList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_experience);
+        setContentView(R.layout.activity_skills);
 
-        recyclerView = findViewById(R.id.exp_recycler_view);
-        expAdapter = new ExpAdapter(inputList);
-        recyclerView.setAdapter(expAdapter);
+        recyclerView = findViewById(R.id.skills_recycler_view);
+        skillAdapter = new SkillAdapter(inputList);
+        recyclerView.setAdapter(skillAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         Button addButton = findViewById(R.id.add_button);
         addButton.setOnClickListener(v -> {
             inputList.add("");
-            expAdapter.notifyItemInserted(inputList.size() - 1);
+            skillAdapter.notifyItemInserted(inputList.size() - 1);
         });
 
         Button saveButton = findViewById(R.id.save_button);
@@ -50,19 +49,10 @@ public class Experience extends AppCompatActivity {
 
                 for (int i = 0; i < recyclerView.getChildCount(); i++) {
                     View rview = recyclerView.getChildAt(i);
-                    TextInputEditText name = rview.findViewById(R.id.name_of_experience);
-                    TextInputEditText type = rview.findViewById(R.id.type_of_experience);
-                    TextInputEditText timeline = rview.findViewById(R.id.timeline);
-                    TextInputEditText desc = rview.findViewById(R.id.description);
-                    String na = name.getText().toString().trim();
-                    String ty = type.getText().toString().trim();
-                    String ti = timeline.getText().toString().trim();
-                    String de = desc.getText().toString().trim();
-                    if (!TextUtils.isEmpty(na)) {
-                        editor.putString("name_of_experience_" + i, na);
-                        editor.putString("type_of_experience_" + i, ty);
-                        editor.putString("timeline_of_experience_" + i, ti);
-                        editor.putString("description_" + i, de);
+                    TextInputEditText skillName = rview.findViewById(R.id.name_of_skill);
+                    String skill = skillName.getText().toString().trim();
+                    if (!TextUtils.isEmpty(skill)) {
+                        editor.putString("skill_" + i, skill);
                     }
                 }
                 editor.putInt("num_items", recyclerView.getChildCount());
